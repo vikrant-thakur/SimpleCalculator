@@ -10,9 +10,6 @@ table {
 	background-color: blue;
 	border-radius: 3px;
 }
-div {
-	text-align: center;
-}
 .displ {
 	width: 86%;
     background-color: grey;
@@ -24,7 +21,6 @@ div {
     margin: 4px 2px;
     cursor: text;
 }
-
 .button {
 	width: 100%;
     background-color: rgb(70,20,10);
