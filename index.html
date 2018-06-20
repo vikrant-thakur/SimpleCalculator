@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html>
-	<head></head>
+	<head>
+		<title>Simple Calculator</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
 	<body>
+		<h1>Simple Calculator</h1>
 		<form name = "calculator">
-		<table>
-			<tr>
-				<td colspan="5">
-					<input type = "text" name="disp" id = "disp" disabled>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type = "button" name="one" value="1" onclick = "calculator.disp.value += '1'"></td>
-				<td>
-					<input type = "button" name="two" value="2" onclick = "calculator.disp.value += '2'"></td>
-				<td>
-					<input type = "button" name="three" value="3" onclick = "calculator.disp.value += '3'"></td>
-				<td>
-					<input type = "button" name="plus" class="operator" value="+" onclick = "calculator.disp.value += '+'"></td>
-					<!-- Needs ammendment for multiple button presses-->
-				<td>
-					<input type = "button" name="All Clear" value="AC" onclick = "calculator.disp.value = ''"></td>	
-			</tr>		
-			<tr>
-				<td>
-					<input type = "button" name="four" value="4" onclick = "calculator.disp.value += '4'"></td>
-				<td>
-					<input type = "button" name="five" value="5" onclick = "calculator.disp.value += '5'"></td>
-				<td>
-					<input type = "button" name="six" value="6" onclick = "calculator.disp.value += '6'"></td>
-				<td>
-					<input type = "button" name="minus" class="operator" value="-" onclick = "calculator.disp.value += '-'"></td>
-					<!-- Needs ammendment for multiple button presses-->
-				<td>
-					<input type = "button" name="Clear" value="c" onclick = "calculator.disp.value = ''">
-					<!-- Needs to change for single backspace-->
-				</td>		
-			</tr>
-			<tr>
-				<td>
-					<input type = "button" name="seven" value="7" onclick = "calculator.disp.value += '7'"></td>
-				<td>
-					<input type = "button" name="eight" value="8" onclick = "calculator.disp.value += '8'"></td>
-				<td>
-					<input type = "button" name="nine" value="9" onclick = "calculator.disp.value += '9'"></td>
-				<td>
-					<input type = "button" name="multiply" class="operator" value="*" onclick = "calculator.disp.value += '*'"></td>
-					<!-- Needs ammendment for multiple button presses-->
-				<td>
-					<input type = "button" name="sign" value="+/-" onclick = "calculator.disp.value *= -1"></td>	
-			</tr>
-			<tr>
-				<td>
-					<input type = "button" name="zero" value="0" onclick = "calculator.disp.value += '0'"></td>
-				<td>
-					<input type = "button" name="point" value="." onclick = "calculator.disp.value += '.'"></td> 
-					<!-- Needs ammendment for multiple button presses-->
-				<td>
-					<input type = "button" name="equals" value="=" onclick = "calculator.disp.value = eval(calculator.disp.value)"></td><!-- Needs ammendment for multiple button presses-->
-				<td>
-					<input type = "button" name="division" class="operator" value="/" onclick = "calculator.disp.value += '/'"></td>
-					<!-- Needs ammendment for multiple button presses-->
-				<td>
-					<input type = "button" name="modulo" value="%" onclick = "calculator.disp.value += '%'"></td> 
-					<!-- Needs ammendment for multiple button presses-->	
-			</tr>			
-		</table>
+		
+			<table>
+				<tr>
+					<td colspan="20">
+						<input style="font-size:30px;" type = "text" class="displ" name="disp" id = "disp" disabled>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type = "button" class="button" name="one" value="1" onclick = "calculator.disp.value += '1'"></td>
+					<td>
+						<input type = "button" class="button" name="two" value="2" onclick = "calculator.disp.value += '2'"></td>
+					<td>
+						<input type = "button" class="button" name="three" value="3" onclick = "calculator.disp.value += '3'"></td>
+					<td>
+						<input type = "button" class="button" name="plus" class="operator" value="+" onclick = "calculator.disp.value += '+'"></td>
+						<!-- Needs ammendment for multiple button presses-->
+					<td>
+						<input type = "button" class="button" name="All Clear" value="AC" onclick = "calculator.disp.value = ''"></td>	
+				</tr>		
+				<tr>
+					<td>
+						<input type = "button" class="button" name="four" value="4" onclick = "calculator.disp.value += '4'"></td>
+					<td>
+						<input type = "button" class="button" name="five" value="5" onclick = "calculator.disp.value += '5'"></td>
+					<td>
+						<input type = "button" class="button" name="six" value="6" onclick = "calculator.disp.value += '6'"></td>
+					<td>
+						<input type = "button" class="button" name="minus" class="operator" value="-" onclick = "calculator.disp.value += '-'"></td>
+						<!-- Needs ammendment for multiple button presses-->
+					<td>
+						<input type = "button" class="button" name="Clear" value="c" onclick = "calculator.disp.value = ''">
+						<!-- Needs to change for single backspace-->
+					</td>		
+				</tr>
+				<tr>
+					<td>
+						<input type = "button" class="button" name="seven" value="7" onclick = "calculator.disp.value += '7'"></td>
+					<td>
+						<input type = "button" class="button" name="eight" value="8" onclick = "calculator.disp.value += '8'"></td>
+					<td>
+						<input type = "button" class="button" name="nine" value="9" onclick = "calculator.disp.value += '9'"></td>
+					<td>
+						<input type = "button" class="button" name="multiply" class="operator" value="*" onclick = "calculator.disp.value += '*'"></td>
+						<!-- Needs ammendment for multiple button presses-->
+					<td>
+						<input type = "button" class="button" name="sign" value="+/-" onclick = "calculator.disp.value *= -1"></td>	
+				</tr>
+				<tr>
+					<td>
+						<input type = "button" class="button" name="zero" value="0" onclick = "calculator.disp.value += '0'"></td>
+					<td>
+						<input type = "button" class="button" name="point" value="." onclick = "calculator.disp.value += '.'"></td> 
+						<!-- Needs ammendment for multiple button presses-->
+					<td>
+						<input type = "button" class="button" name="equals" value="=" onclick = "calculator.disp.value = eval(calculator.disp.value)"></td><!-- Needs ammendment for multiple button presses-->
+					<td>
+						<input type = "button" class="button" name="division" class="operator" value="/" onclick = "calculator.disp.value += '/'"></td>
+						<!-- Needs ammendment for multiple button presses-->
+					<td>
+						<input type = "button" class="button" name="modulo" value="%" onclick = "calculator.disp.value += '%'"></td> 
+						<!-- Needs ammendment for multiple button presses-->	
+				</tr>			
+			</table>
+
 		</form>
 	</body>
 </html>		
