@@ -9,9 +9,9 @@
 		<h1>Simple Calculator</h1>
 		<form name = "calculator">
 		
-			<table>
+			<table class="center">
 				<tr>
-					<td colspan="20">
+					<td colspan="30">
 						<input style="font-size:30px;" type = "text" class="displ" name="disp" id = "disp" disabled>
 					</td>
 				</tr>
@@ -60,11 +60,11 @@
 					<td>
 						<input type = "button" class="button" name="point" value="." onclick = "displayOperator('.')"></td> 
 					<td>
-						<input type = "button" class="button" name="equals" value="=" onclick = "calculator.disp.value = eval(calculator.disp.value)"></td><!-- Needs ammendment for multiple button presses-->
+						<input type = "button" class="button" name="equals" value="=" onclick = "calculator.disp.value = express()"></td>
 					<td>
 						<input type = "button" class="button" name="division" class="operator" value="/" onclick = "displayOperator('/')"></td>		
 					<td>
-						<input type = "button" class="button" name="modulo" value="%" onclick = "displayOperator('%')"></td> 			
+						<input type = "button" class="button" name="double zero" value="00" onclick = "calculator.disp.value += '00'"></td> 			
 				</tr>			
 			</table>
 

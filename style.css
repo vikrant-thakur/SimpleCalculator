@@ -1,17 +1,16 @@
 h1 {
-    text-align: left;
+    text-align: center;
     color: navy;
-    margin-left: 40px;
-    
+	margin-top: 100px;       
 }
 table {
 	width: 40%;
-	margin-left: 40px;
 	background-color: blue;
-	border-radius: 3px;
+	border-radius: 4px;
 }
 .displ {
 	width: 86%;
+	border-radius: 4px;
     background-color: grey;
     color: white;
     padding: 15px 32px;
@@ -23,6 +22,7 @@ table {
 }
 .button {
 	width: 100%;
+	border-radius: 4px;
     background-color: rgb(70,20,10);
     border: outset;
     color: white;
@@ -33,4 +33,9 @@ table {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top: 30px;
 }
