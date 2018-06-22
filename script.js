@@ -2,7 +2,7 @@
 // Evaluates the expression
 function express() {													  	
     var str = document.getElementById("disp").value; 
-    var signed_floats = str.match(/[+-]?(\d+([.]\d*)?|[.]\d+)/g);	// REGEX to match signed floats
+    var signed_floats = str.match(/[+-]?(\d+([.]\d*)?|[.]\d+)/g);			// REGEX to match signed floats
     for (i=0;i<signed_floats.length;i++){
     	str = str.replace(signed_floats[i],"N");							// Replacing all matches with "N"
     }
@@ -25,7 +25,7 @@ function express() {
             i-=1;
         }
     }
-    // Ading up all final floats
+    // Adding up all final floats
     var result=0;
     for (j=0;j<signed_floats.length;j++){									
     	result+=parseFloat(signed_floats[j]);
@@ -52,13 +52,13 @@ function displayOperator(val){
 
 // Deleting a selection or single backspace
 function backspace(){                   
-	if (window.getSelection() != "undefined"){
+	if (window.getSelection().toString().length != 0){
 		var s = window.getSelection();
 		var x = document.getElementById("disp").value ;
 		document.getElementById("disp").value = x.replace(s,"");
 	} 
 	else{         					  	 
-		text = document.getElementById("disp").value
+		text = document.getElementById("disp").value ;
 		document.getElementById("disp").value = text.substr(0,text.length-1);
 	}
 }
