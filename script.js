@@ -2,7 +2,7 @@
 // Evaluates the expression
 function express() {													  	
     var str = document.getElementById("disp").value; 
-    var signed_floats = str.match(/[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)/g);	// REGEX to match signed floats
+    var signed_floats = str.match(/[+-]?(\d+([.]\d*)?|[.]\d+)/g);	// REGEX to match signed floats
     for (i=0;i<signed_floats.length;i++){
     	str = str.replace(signed_floats[i],"N");							// Replacing all matches with "N"
     }
@@ -50,8 +50,15 @@ function displayOperator(val){
 	}
 }
 
-// One backspace at a time
-function backspace(){                               					  	 
-	text = document.getElementById("disp").value
-	document.getElementById("disp").value = text.substr(0,text.length-1);
+// Deleting a selection or single backspace
+function backspace(){                   
+	if (window.getSelection() != "undefined"){
+		var s = window.getSelection();
+		var x = document.getElementById("disp").value ;
+		document.getElementById("disp").value = x.replace(s,"");
+	} 
+	else{         					  	 
+		text = document.getElementById("disp").value
+		document.getElementById("disp").value = text.substr(0,text.length-1);
+	}
 }
