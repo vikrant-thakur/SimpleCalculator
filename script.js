@@ -1,7 +1,13 @@
 
 // Evaluates the expression
 function express() {													  	
-    var str = document.getElementById("disp").value; 
+    var str = document.getElementById("disp").value;
+    if ((str.substr(0,8) == "Infinity" && ["+","-","*","/"].indexOf(str[8]) == -1) || (str.substr(0,5) == "Error") || ((str.substr(0,3) == "NaN"))){
+        return "Error";
+    }
+    if (str.substr(0,8) == "Infinity") {
+        str = str.replace("Infinity","1/0");
+    }
     var signed_floats = str.match(/[+-]?(\d+([.]\d*)?|[.]\d+)/g);			// REGEX to match signed floats
     for (i=0;i<signed_floats.length;i++){
     	str = str.replace(signed_floats[i],"N");							// Replacing all matches with "N"
@@ -30,6 +36,9 @@ function express() {
     for (j=0;j<signed_floats.length;j++){									
     	result+=parseFloat(signed_floats[j]);
     }  
+    if (parseInt(result) == parseFloat(result)){
+        return parseInt(result);
+    }
     return result.toFixed(8);
 }    
 
