@@ -1,4 +1,4 @@
-
+var ans = 0;                                                                // Global variable to store previous answer
 // Evaluates the expression
 function express() {													  	
     var str = document.getElementById("disp").value;
@@ -36,7 +36,8 @@ function express() {
     for (j=0;j<signed_floats.length;j++){									
     	result+=parseFloat(signed_floats[j]);
     }  
-    return parseFloat(result.toFixed(8));
+    ans = parseFloat(result.toFixed(8));
+    return ans;
 }    
 
 // Covers cases of pressing multiple operators one after other
@@ -79,4 +80,8 @@ function backspace(){
 		text = document.getElementById("disp").value ;
 		document.getElementById("disp").value = text.substr(0,text.length-1);
 	}
+}
+
+function mem_cache(){
+    return ans;
 }
