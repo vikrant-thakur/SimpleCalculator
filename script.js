@@ -36,18 +36,27 @@ function express() {
     for (j=0;j<signed_floats.length;j++){									
     	result+=parseFloat(signed_floats[j]);
     }  
-    if (parseInt(result) == parseFloat(result)){
-        return parseInt(result);
-    }
-    return result.toFixed(8);
+    return parseFloat(result.toFixed(8));
 }    
 
 // Covers cases of pressing multiple operators one after other
 function displayOperator(val){                       					  	
 	text = document.getElementById("disp").value
-	if((text[text.length - 1]==".") && val=="."){                          				// Checks for simultaneous dots
-		document.getElementById("disp").value = document.getElementById("disp").value;
-	}
+    var bool=false;
+    if (val=="."){                                                                      // Covers all cases for "."
+        for (var i = text.length - 1; i >= 0; i--) {
+            if (text[i]=="."){
+                bool=true;
+                break;
+            }
+            if (["+","-","*","/"].indexOf(text[i]) != -1){
+                break;
+            }
+        }
+        if (bool==false){                                         
+            document.getElementById("disp").value += val;
+        }
+    }	
 	else if((text[text.length - 1]=="*" || text[text.length - 1]=="/") && val=="-"){    // Checks for negative floats 
 		document.getElementById("disp").value += val;			 
 	}
